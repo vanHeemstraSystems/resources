@@ -16,7 +16,7 @@ module.exports = function() {
   return new Promise(function(resolve) {
 	console.log('Resource: 6e8bc430-9c3a-11d9-9669-0800200c9a66 - inside Promise');
     _Resource = {
-      UID : 'urn:uuid:6e8bc430-9c3a-11d9-9669-0800200c9a66'
+      URI : 'urn:uuid:6e8bc430-9c3a-11d9-9669-0800200c9a66'
     }; 
 	console.log('Resource: 6e8bc430-9c3a-11d9-9669-0800200c9a66 - resolve');
 	resolve(_Resource); 
