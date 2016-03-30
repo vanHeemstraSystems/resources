@@ -6,21 +6,19 @@
  * Returns: a Promise
  */
 var path = require('../libraries/path');
-var paths = require('../paths/paths'); 
+var paths = require('../paths/paths');
 // Bluebird has the incredibly useful functionality of enabling you to ‘promisfy’ modules which do not return promises. 
 // For example, to promisfy the fs module, simply require bluebird and a promisified version of fs.
 var Promise = require(path.join(paths.libraries, '/bluebird.js'));
 //var fs = Promise.promisifyAll(require(path.join(paths.libraries, '/fs.js')));
 
 module.exports = function(uuid) {
-  console.log('Resources - called ************************************************************************');
+  console.log('Resources - called');
   var _Resources = {};
   // Create a new Promise
   return new Promise(function(resolve) {
 	console.log('Resources - inside Promise');
-	//var resource = require('./6e8bc430-9c3a-11d9-9669-0800200c9a66.js'); // A function that returns a Promise
-	var resource = require('./6e8bc430_9c3a_11d9_9669_0800200c9a66.js'); // A function that returns a Promise
-	//var resource = require('./'+uuid+'.js'); // A function that returns a Promise
+	var resource = require('./'+uuid+'.js'); // A function that returns a Promise
 	resource()
       .then(function(resource) {
         console.log('Resources - resource: ', resource);

@@ -1,5 +1,5 @@
 /*
- * 6e8bc430-9c3a-11d9-9669-0800200c9a66
+ * Resource: 6e8bc430-9c3a-11d9-9669-0800200c9a66
  * 
  */
 var path = require('../libraries/path');
@@ -10,15 +10,15 @@ var Promise = require(path.join(paths.libraries, '/bluebird.js'));
 //var fs = Promise.promisifyAll(require(path.join(paths.libraries, '/fs.js')));
 
 module.exports = function() {
-  console.log('6e8bc430-9c3a-11d9-9669-0800200c9a66 - called');
-  var _6e8bc430-9c3a-11d9-9669-0800200c9a66 = {};
+  console.log('Resource: 6e8bc430-9c3a-11d9-9669-0800200c9a66 - called');
+  var _Resource = {};
   // Create a new Promise
   return new Promise(function(resolve) {
-	console.log('6e8bc430-9c3a-11d9-9669-0800200c9a66 - inside Promise');
-    _6e8bc430-9c3a-11d9-9669-0800200c9a66 = {
-      UID : 'yourhostname.com' // put your UID here  	
+	console.log('Resource: 6e8bc430-9c3a-11d9-9669-0800200c9a66 - inside Promise');
+    _Resource = {
+      UID : 'urn:uuid:6e8bc430-9c3a-11d9-9669-0800200c9a66'
     }; 
-	console.log('6e8bc430-9c3a-11d9-9669-0800200c9a66 - resolve');	
-	resolve(_6e8bc430-9c3a-11d9-9669-0800200c9a66);   
+	console.log('Resource: 6e8bc430-9c3a-11d9-9669-0800200c9a66 - resolve');
+	resolve(_Resource); 
   });
 }
