@@ -6,7 +6,7 @@
  * output: resolve - a Promise
  */
 module.exports = function(uuid) {
-  console.log('Resources - called');
+  console.log('resources - called');
   var _Me = {};
   var path = require('../libraries/path'); //TEMP hard coded
   var paths = require('../paths/paths'); //TEMP hard coded
