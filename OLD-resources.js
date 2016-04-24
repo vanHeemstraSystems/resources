@@ -1,17 +1,17 @@
 /*
  * resources.js
  *
- * input: input - an Object
+ * input: uuid - an Object
  *
  * output: resolve - a Promise
  */
-module.exports = function() {
+module.exports = function(uuid) {
   console.log('resources - called');
   var _Me = {};
-  var path = require('../libraries/path');
-  var paths = require('../paths/paths'); 
-  var promise = require(path.join(paths.libraries, '/promise.js'));
-  var _resource = require(__dirname+'/resource.js');
+  var path = require('../libraries/path'); //TEMP hard coded
+  var paths = require('../paths/paths'); //TEMP hard coded
+  var promise = require(path.join(paths.libraries, '/promise.js')); //TEMP hard coded
+  var _resource = require('./'+uuid+'.js'); // A function that returns a Promise
   var join = promise.join;
   return new promise(function(resolve) {
     join(_resource(), function(resource) {
@@ -19,11 +19,11 @@ module.exports = function() {
     }); // eof join
     console.log('resources - resolve(_Me): ', _Me);
     resolve(_Me);
-  }) // eof promise
+  })
   .catch(function(error) {
     console.log('resources - error: ', error);
-  }) // eof catch
+  })
   .finally(function() {
     console.log('resources - finally');
-  }); // eof finally
-} // eof module
+  }); // eof promise
+}
