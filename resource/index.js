@@ -17,4 +17,4 @@ Resource.prototype._6e8bc430_9c3a_11d9_9669_0800200c9a66 = function() {
   return new Resource6e8bc430_9c3a_11d9_9669_0800200c9a66();
 }
 
-module.exports = new Resource();
+module.exports = function() { return new Resource(); }

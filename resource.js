@@ -2,4 +2,4 @@
 //
 //export default Resource;
 
-module.resource = require(__dirname+'/resource/index.js');
+module.exports = require(__dirname+'/resource/index.js');
